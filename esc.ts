@@ -1,11 +1,11 @@
 import escpos from "escpos";
 // install escpos-usb adapter module manually
-// import escposu from "escpos-usb";
+import escposu from "escpos-usb";
 // Select the adapter based on your printer type
-// escpos.USB = escposu;
-// const device = new escpos.USB();
+escpos.USB = escposu;
+const device = new escpos.USB();
 // const device  = new escpos.Network('localhost');
-const device = new escpos.Serial(0);
+// const device = new escpos.Serial(0);
 
 const options = { encoding: "GB18030" /* default */ };
 // encoding is optional
